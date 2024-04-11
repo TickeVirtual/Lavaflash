@@ -307,7 +307,7 @@ img#impresoraButton {
                 cantidad: cantidades[id],
                 descripcion: descripciones[id], // + " " + detalles[id], // Descomenta si deseas concatenar la descripción con el detalle
                 detalle: detalle[id],
-                subtotal: parseFloat(subtotal[id]).toFixed(2),
+                subtotal: subtotal[id],
                 precio_unit: parseFloat(p_units[id]).toFixed(2),
               
             };
@@ -400,8 +400,7 @@ img#impresoraButton {
     newRow.className = "table-item";
 
     // Calcula el subtotal para el servicio actual
-    var subtotal = row.cantidad * parseFloat(row.precio_unit);subtotal.textContent = parseFloat(subtotal).toFixed(2);
-
+    var subtotal = row.cantidad * parseFloat(row.precio_unit);
     
     newRow.innerHTML = `
 
@@ -472,7 +471,7 @@ document.getElementById('impresoraButton').addEventListener('click', printTicket
      
         
         
-  </script>
+    </script>
     
     
 
@@ -503,7 +502,7 @@ document.getElementById('impresoraButton').addEventListener('click', printTicket
                 </tr>
                 
                 <tr class="table-footer">
-                    <td colspan="3"><h2>POR PAG</h2></td>
+                    <td colspan="3"><h2>0</h2></td>
                     <td colspan="3"><h2 id="total_a_pagar"></h2></td>
                 </tr>
                 
@@ -568,9 +567,6 @@ document.getElementById('impresoraButton').addEventListener('click', printTicket
                 <b>GRACIAS POR SU PREFERENCIA!!</b>
             </p>
     </div>
-
-         
-         
     <script>
         var nroBoletaElement = document.getElementById("nro_boleta_id").textContent = nro_boleta;
         var fechaElement = document.getElementById("fecha").textContent = fecha;
@@ -578,18 +574,16 @@ document.getElementById('impresoraButton').addEventListener('click', printTicket
         var fecha_entregaElement = document.getElementById("fecha_entrega").textContent = fecha_entrega;
         
 
-        var totalElement = document.getElementById("total");totalElement.textContent = parseFloat(total).toFixed(2);
-        var subtotal_descElement = document.getElementById("subtotal_desc");subtotal_descElement.textContent = parseFloat(subtotal_desc).toFixed(2);
-        var desc_por_prendaElement = document.getElementById("desc_por_prenda");desc_por_prendaElement.textContent = parseFloat(desc_por_prenda).toFixed(2);
-
-        var a_cuentaElement = document.getElementById("a_cuenta");a_cuentaElement.textContent = parseFloat(a_cuenta).toFixed(2);
-        var a_cuenta_dosElement = document.getElementById("a_cuenta_dos"); a_cuenta_dosElement.textContent = parseFloat(a_cuenta_dos).toFixed(2);
-
-
-        var total_por_pagarElement = document.getElementById("total_por_pagar").textContent = total_por_pagar;
+        var totalElement = document.getElementById("total").textContent = total;
+        var subtotal_descElement = document.getElementById("subtotal_desc").textContent = subtotal_desc;
+        var desc_por_prendaElement = document.getElementById("desc_por_prenda").textContent = desc_por_prenda;
+        var total_a_pagarElement = document.getElementById("total_a_pagar").textContent = total_a_pagar;
+        var a_cuentaElement = document.getElementById("a_cuenta").textContent = a_cuenta;
+        var a_cuenta_dosElement = document.getElementById("a_cuenta_dos").textContent = a_cuenta_dos;
+        
         var porcent_descElement = document.getElementById("porcent_desc").textContent = porcent_desc;
         var porcent_desc_plataElement = document.getElementById("porcent_desc_plata").textContent = porcent_desc_plata;
-           
+        var total_por_pagarElement = document.getElementById("total_por_pagar").textContent = total_por_pagar;
         
         var estadoElement = document.getElementById("estado").textContent = estado;
       </script>   
