@@ -585,11 +585,8 @@ document.getElementById('impresoraButton').addEventListener('click', printTicket
         var a_cuentaElement = document.getElementById("a_cuenta");a_cuentaElement.textContent = parseFloat(a_cuenta).toFixed(2);
         var a_cuenta_dosElement = document.getElementById("a_cuenta_dos"); a_cuenta_dosElement.textContent = parseFloat(a_cuenta_dos).toFixed(2);
 
-      function roundToNearestHalf(number) {
-    return Math.round(number * 2) / 2;
-}
 
-        var total_por_pagarRounded = roundToNearestHalf(parseFloat(total_por_pagar)); total_por_pagarElement.textContent = total_por_pagarRounded.toFixed(2);
+        var total_por_pagarElement = document.getElementById("total_por_pagar").textContent = total_por_pagar;
         var porcent_descElement = document.getElementById("porcent_desc").textContent = porcent_desc;
         var porcent_desc_plataElement = document.getElementById("porcent_desc_plata").textContent = porcent_desc_plata;
            
