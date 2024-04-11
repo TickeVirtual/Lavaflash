@@ -574,7 +574,7 @@ document.getElementById('impresoraButton').addEventListener('click', printTicket
         var fecha_entregaElement = document.getElementById("fecha_entrega").textContent = fecha_entrega;
         
 
-        var totalElement = document.getElementById("total").textContent = total;
+        var totalElement = document.getElementById("total");totalElement.textContent = parseFloat(total).toFixed(2);
         var subtotal_descElement = document.getElementById("subtotal_desc").textContent = subtotal_desc;
         var desc_por_prendaElement = document.getElementById("desc_por_prenda").textContent = desc_por_prenda;
         var total_a_pagarElement = document.getElementById("total_a_pagar").textContent = total_a_pagar;
