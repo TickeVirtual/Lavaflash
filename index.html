@@ -307,7 +307,7 @@ img#impresoraButton {
                 cantidad: cantidades[id],
                 descripcion: descripciones[id], // + " " + detalles[id], // Descomenta si deseas concatenar la descripción con el detalle
                 detalle: detalle[id],
-                subtotal: subtotal[id],
+                subtotal: parseFloat(subtotal[id]).toFixed(2),
                 precio_unit: parseFloat(p_units[id]).toFixed(2),
               
             };
