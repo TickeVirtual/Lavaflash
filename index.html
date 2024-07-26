@@ -34,7 +34,7 @@
       .nombre-cliente {
         margin: 0mm;
         margin-top: 0;
-        font-size: mm !important;
+        font-size: 4.5mm !important;
       }
 
       #thermal-pos {
@@ -277,6 +277,7 @@ img#impresoraButton {
         var porcent_desc_plata = params.has('porcent_desc_plata') ? params.get('porcent_desc_plata') : " ";
         var total_por_pagar = params.has('total_por_pagar') ? params.get('total_por_pagar') : " ";
         var estado = params.has('estado') ? params.get('estado') : "--";
+        var total_prendas = params.has('total_prendas') ? params.get('total_prendas') : "--";
         
         
         
@@ -529,6 +530,10 @@ document.getElementById('impresoraButton').addEventListener('click', printTicket
             <b><span class="estado-deuda" id="estado"></span></b>
         </p>
         <br/>
+        <p class="prendas:">
+            <b><span class="total_prendas" id="total_prendas"></span></b>
+        </p>
+        <br/>
        <div class="policy">
             <p class="policy-title">
                 <b>IMPORTANTE_:</b>
@@ -589,6 +594,7 @@ document.getElementById('impresoraButton').addEventListener('click', printTicket
            
         
         var estadoElement = document.getElementById("estado").textContent = estado;
+        var total_prendasElement = document.getElementById("total_prendas").textContent = total_prendas;
       </script>   
 
 <script>
