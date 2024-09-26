@@ -278,6 +278,7 @@ img#impresoraButton {
         var total_por_pagar = params.has('total_por_pagar') ? params.get('total_por_pagar') : " ";
         var estado = params.has('estado') ? params.get('estado') : "--";
         var total_prendas = params.has('total_prendas') ? params.get('total_prendas') : "--";
+        var observaciones = params.has('observaciones') ? params.get('observaciones') : "--";
         
         
         
@@ -541,6 +542,11 @@ document.getElementById('impresoraButton').addEventListener('click', printTicket
             <b><span class="total_prendas" id="total_prendas"></span></b>
         </p>
 
+         <p class="prendas:">
+            <b><span class="observaciones" id="observaciones"></span></b>
+        </p>
+
+
        <div class="policy">
             <p class="policy-title">
                 <b>IMPORTANTE_:</b>
@@ -602,6 +608,7 @@ document.getElementById('impresoraButton').addEventListener('click', printTicket
         
         var estadoElement = document.getElementById("estado").textContent = estado;
         var total_prendasElement = document.getElementById("total_prendas").textContent = total_prendas;
+        var observacionesElement = document.getElementById("observaciones").textContent = observaciones;
       </script>   
 
 <script>
