@@ -261,6 +261,7 @@ img#impresoraButton {
         var nro_boleta = params.has('boleta') ? params.get('boleta') : "---";
         var nombre_cliente = params.has('cliente') ? params.get('cliente') : "==Cliente==";
         var telefono = params.has('telefono') ? params.get('telefono') : "==Cliente==";
+        var usuario = params.has('usuario') ? params.get('usuario') : "==USUARIO==";
         var codigo_pais = params.has('codigo_pais') ? params.get('codigo_pais') : "==Cliente==";
         var fecha = params.has('fecha') ? params.get('fecha') : "dd/mm/aaaa hh:mm:ss";
         var fecha_entrega = params.has('fecha_entrega') ? params.get('fecha_entrega') : "hh:mm:ss";
@@ -585,13 +586,19 @@ document.getElementById('impresoraButton').addEventListener('click', printTicket
             <p class="policy-title">
                 <b>GRACIAS POR SU PREFERENCIA!!</b>
             </p>
-    </div>
+         </div>
+          <div class="policy">
+            <p class="policy-title">
+                ATENDIDO POR:
+                <b><span class="usuario" id="usuario"></span></b>
+            </p>
+          </div>
     <script>
         var nroBoletaElement = document.getElementById("nro_boleta_id").textContent = nro_boleta;
         var fechaElement = document.getElementById("fecha").textContent = fecha;
         var nombre_clientElement = document.getElementById("nombre_client").textContent = nombre_cliente;
         var fecha_entregaElement = document.getElementById("fecha_entrega").textContent = fecha_entrega;
-        
+        var usuarioElement = document.getElementById("usuario").textContent = usuario;
 
         var totalElement = document.getElementById("total");totalElement.textContent = parseFloat(total).toFixed(2);
         var subtotal_descElement = document.getElementById("subtotal_desc");subtotal_descElement.textContent = parseFloat(subtotal_desc).toFixed(2);
